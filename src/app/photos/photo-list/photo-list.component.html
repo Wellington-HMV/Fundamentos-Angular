@@ -1,1 +1,10 @@
-<h1>Ol[a</h1>
+<ap-search
+    (onTyping)="filter = $event" [value]="filter">
+</ap-search>
+
+<ap-photos [photos]="photos | filterByDescription: filter"></ap-photos>
+
+<ap-load-button 
+    (click)="load()" 
+    [hasMore]="hasMore">
+</ap-load-button>
